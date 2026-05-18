@@ -23,7 +23,7 @@ export default function HomePage() {
           <div className="text-center max-w-3xl mx-auto">
             <div>
               <span className="inline-block text-sm font-heading font-medium text-gold/80 tracking-[0.3em] uppercase mb-6">
-                ✦ Amazing Gift Ideas ✦
+                ✦ Say Love With Flowers ✦
               </span>
             </div>
 

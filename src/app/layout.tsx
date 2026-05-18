@@ -22,7 +22,7 @@ const cormorant = Cormorant_Garamond({
 })
 
 export const metadata: Metadata = {
-  title: 'Debouquet Florist - Amazing Gift Ideas',
+  title: 'Debouquet Florist - Say Love With Flowers',
   description:
     'Toko buket bunga, buket uang, dan karangan bunga premium. Desain elegan untuk setiap momen spesial Anda. Est. 2021',
   keywords: ['buket bunga', 'buket uang', 'karangan bunga', 'florist', 'toko bunga', 'debouquet'],

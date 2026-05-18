@@ -12,7 +12,7 @@ export function Footer() {
               <span className="font-heading text-xs text-gold/60 tracking-wider uppercase">Florist</span>
             </div>
             <p className="text-sm text-gray-400 leading-relaxed">
-              Amazing Gift Ideas. Kami menghadirkan rangkaian bunga dan buket premium
+              Say Love With Flowers. Kami menghadirkan rangkaian bunga dan buket premium
               dengan desain elegan untuk setiap perayaan Anda. Est. 2021
             </p>
           </div>
