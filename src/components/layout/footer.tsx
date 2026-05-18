@@ -44,9 +44,7 @@ export function Footer() {
             <h4 className="font-heading font-semibold text-gold/90 mb-4 tracking-wide">Hubungi Kami</h4>
             <div className="flex flex-col gap-2 text-sm text-gray-400">
               <p>📍 Cianjur, Jawa Barat</p>
-              <p>📱 +62 812-3456-7890</p>
-              <p>📧 hello@debouquetflorist.id</p>
-              <p>🕐 Senin - Sabtu, 08:00 - 20:00</p>
+              <p>📱 +62 858-7153-3822</p>
             </div>
           </div>
         </div>

@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion'
 
 export function WhatsAppFloat() {
-  const phone = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || '6281234567890'
+  const phone = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || '6285871533822'
   const message = encodeURIComponent('Halo admin Debouquet Florist, saya ingin bertanya tentang produk.')
 
   return (

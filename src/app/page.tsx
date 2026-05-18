@@ -54,7 +54,7 @@ export default function HomePage() {
       </section>
 
       {/* Categories Section */}
-      <section className="section-padding bg-base-100">
+      {/* <section className="section-padding bg-base-100">
         <div className="container-florea">
           <div className="text-center mb-12">
             <h2 className="font-heading text-3xl md:text-4xl font-light text-white">
@@ -99,7 +99,7 @@ export default function HomePage() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Featured Products */}
       <section className="section-padding bg-base-200">
@@ -207,7 +207,7 @@ export default function HomePage() {
             Hubungi kami via WhatsApp untuk konsultasi dan pemesanan buket custom sesuai keinginan Anda.
           </p>
           <a
-            href={`https://wa.me/${process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || '6281234567890'}?text=${encodeURIComponent('Halo admin Debouquet Florist, saya ingin memesan buket.')}`}
+            href={`https://wa.me/${process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || '6285871533822'}?text=${encodeURIComponent('Halo admin Debouquet Florist, saya ingin memesan buket.')}`}
             target="_blank"
             rel="noopener noreferrer"
             className="btn-florea inline-block mt-8"

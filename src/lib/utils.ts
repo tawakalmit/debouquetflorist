@@ -17,7 +17,7 @@ export function generateInvoiceNumber(): string {
 }
 
 export function generateWhatsAppUrl(message: string): string {
-  const phone = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || '6281234567890'
+  const phone = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || '6285871533822'
   const encodedMessage = encodeURIComponent(message)
   return `https://wa.me/${phone}?text=${encodedMessage}`
 }
