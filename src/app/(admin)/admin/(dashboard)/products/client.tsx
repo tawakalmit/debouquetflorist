@@ -52,7 +52,7 @@ export function AdminProductsClient({ categories }: AdminProductsClientProps) {
       toast.error(result.error)
     } else {
       toast.success('Produk berhasil dihapus')
-      fetchProducts()
+      setProducts((prev) => prev.filter((p) => p.id !== deleteId))
     }
     setDeleteId(null)
   }

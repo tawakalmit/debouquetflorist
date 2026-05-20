@@ -1,6 +1,7 @@
 'use server'
 
 import { createClient } from '@/lib/supabase/server'
+import { createAdminClient } from '@/lib/supabase/admin'
 import { revalidatePath } from 'next/cache'
 import { generateInvoiceNumber } from '@/lib/utils'
 import type { Order, OrderStatus } from '@/types'
@@ -91,7 +92,7 @@ export async function getUserOrders() {
 }
 
 export async function getAllOrders() {
-  const supabase = await createClient()
+  const supabase = createAdminClient()
 
   const { data, error } = await supabase
     .from('orders')
@@ -107,7 +108,7 @@ export async function getAllOrders() {
 }
 
 export async function updateOrderStatus(orderId: string, status: OrderStatus) {
-  const supabase = await createClient()
+  const supabase = createAdminClient()
 
   const { error } = await supabase
     .from('orders')
@@ -124,7 +125,7 @@ export async function updateOrderStatus(orderId: string, status: OrderStatus) {
 }
 
 export async function getOrderStats() {
-  const supabase = await createClient()
+  const supabase = createAdminClient()
 
   const { count: totalProducts } = await supabase
     .from('products')
@@ -157,7 +158,7 @@ export async function updateOrderCustomer(
   orderId: string,
   data: { customer_name: string; phone: string }
 ) {
-  const supabase = await createClient()
+  const supabase = createAdminClient()
 
   const { error } = await supabase
     .from('orders')
