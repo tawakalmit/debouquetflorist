@@ -3,9 +3,9 @@
 import { useState, useEffect } from 'react'
 import Image from 'next/image'
 import { motion, AnimatePresence } from 'framer-motion'
-import { createClient } from '@/lib/supabase/client'
 import type { Product, Category } from '@/types'
 import { toast } from 'sonner'
+import { uploadImage } from '@/actions/upload'
 
 type ProductFormModalProps = {
   isOpen: boolean
@@ -41,30 +41,23 @@ export function ProductFormModal({
     if (!files || files.length === 0) return
     setUploading(true)
 
-    const supabase = createClient()
-
     for (const file of Array.from(files)) {
-      const fileExt = file.name.split('.').pop()
-      const fileName = `${Date.now()}-${Math.random().toString(36).substring(7)}.${fileExt}`
-      const filePath = `products/${fileName}`
+      const formData = new FormData()
+      formData.set('file', file)
 
-      const { error } = await supabase.storage
-        .from('images')
-        .upload(filePath, file)
+      const result = await uploadImage(formData)
 
-      if (error) {
-        toast.error(`Upload gagal: ${error.message}`)
+      if (result.error) {
+        toast.error(`Upload gagal: ${result.error}`)
         continue
       }
 
-      const { data: urlData } = supabase.storage
-        .from('images')
-        .getPublicUrl(filePath)
-
-      if (isThumbnail) {
-        setThumbnail(urlData.publicUrl)
-      } else {
-        setImages((prev) => [...prev, urlData.publicUrl])
+      if (result.url) {
+        if (isThumbnail) {
+          setThumbnail(result.url)
+        } else {
+          setImages((prev) => [...prev, result.url!])
+        }
       }
     }
 
