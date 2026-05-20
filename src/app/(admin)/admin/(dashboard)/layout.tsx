@@ -1,7 +1,9 @@
 import { AdminSidebar } from '@/components/layout/admin-sidebar'
+import type { Metadata } from 'next'
 
-export const metadata = {
-  title: 'Admin Dashboard - Debouquet Florist',
+export const metadata: Metadata = {
+  title: 'Admin Dashboard',
+  robots: { index: false, follow: false },
 }
 
 export default function AdminLayout({

@@ -2,9 +2,12 @@ import { Suspense } from 'react'
 import { Navbar } from '@/components/layout/navbar'
 import { Footer } from '@/components/layout/footer'
 import { CheckoutSuccessContent } from './content'
+import type { Metadata } from 'next'
 
-export const metadata = {
-  title: 'Pesanan Berhasil - Debouquet Florist',
+export const metadata: Metadata = {
+  title: 'Pesanan Berhasil',
+  description: 'Pesanan Anda telah berhasil dibuat. Terima kasih telah berbelanja di Debouquet Florist.',
+  robots: { index: false, follow: false },
 }
 
 export default function CheckoutSuccessPage() {

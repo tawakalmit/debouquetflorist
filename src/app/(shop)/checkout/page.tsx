@@ -1,9 +1,12 @@
 import { Navbar } from '@/components/layout/navbar'
 import { Footer } from '@/components/layout/footer'
 import { CheckoutForm } from '@/components/cart/checkout-form'
+import type { Metadata } from 'next'
 
-export const metadata = {
-  title: 'Checkout - Debouquet Florist',
+export const metadata: Metadata = {
+  title: 'Checkout',
+  description: 'Selesaikan pemesanan buket bunga Anda di Debouquet Florist.',
+  robots: { index: false, follow: false },
 }
 
 export default function CheckoutPage() {

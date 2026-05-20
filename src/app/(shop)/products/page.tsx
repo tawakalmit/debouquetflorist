@@ -3,10 +3,20 @@ import { Navbar } from '@/components/layout/navbar'
 import { Footer } from '@/components/layout/footer'
 import { ProductsGrid } from '@/components/product/products-grid'
 import { ProductGridSkeleton } from '@/components/ui/skeleton'
+import type { Metadata } from 'next'
 
-export const metadata = {
-  title: 'Produk - Debouquet Florist',
-  description: 'Koleksi buket bunga, buket uang, dan karangan bunga premium dari Debouquet Florist.',
+export const metadata: Metadata = {
+  title: 'Koleksi Buket & Karangan Bunga',
+  description:
+    'Jelajahi koleksi lengkap buket bunga, buket uang, dan karangan bunga premium dari Debouquet Florist. Tersedia berbagai pilihan untuk wisuda, anniversary, valentine, dan momen spesial lainnya.',
+  openGraph: {
+    title: 'Koleksi Buket & Karangan Bunga - Debouquet Florist',
+    description:
+      'Jelajahi koleksi lengkap buket bunga, buket uang, dan karangan bunga premium dari Debouquet Florist.',
+  },
+  alternates: {
+    canonical: '/products',
+  },
 }
 
 export default function ProductsPage() {

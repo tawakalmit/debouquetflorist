@@ -2,9 +2,12 @@ import { Navbar } from '@/components/layout/navbar'
 import { Footer } from '@/components/layout/footer'
 import { OrdersList } from '@/components/cart/orders-list'
 import { getUserOrders } from '@/actions/orders'
+import type { Metadata } from 'next'
 
-export const metadata = {
-  title: 'Pesanan Saya - Debouquet Florist',
+export const metadata: Metadata = {
+  title: 'Pesanan Saya',
+  description: 'Lihat status dan riwayat pesanan Anda di Debouquet Florist.',
+  robots: { index: false, follow: false },
 }
 
 export default async function MyOrdersPage() {

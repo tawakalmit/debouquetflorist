@@ -3,9 +3,37 @@ import { Navbar } from '@/components/layout/navbar'
 import { Footer } from '@/components/layout/footer'
 import { FeaturedProducts } from '@/components/product/featured-products'
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://debouquet.com'
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Florist',
+  name: 'Debouquet Florist',
+  description: 'Toko buket bunga, buket uang, dan karangan bunga premium. Desain elegan untuk setiap momen spesial Anda.',
+  url: siteUrl,
+  telephone: '+6285871533822',
+  foundingDate: '2021',
+  priceRange: 'Rp50.000 - Rp1.000.000',
+  sameAs: [],
+  address: {
+    '@type': 'PostalAddress',
+    addressCountry: 'ID',
+  },
+  openingHoursSpecification: {
+    '@type': 'OpeningHoursSpecification',
+    dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
+    opens: '08:00',
+    closes: '21:00',
+  },
+}
+
 export default function HomePage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <Navbar />
 
       {/* Hero Section */}
